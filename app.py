@@ -1,5 +1,6 @@
+
 from pathlib import Path
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 
 app = Flask(__name__)
 
@@ -32,9 +33,10 @@ def home():
 
 @app.route("/student-feedback")
 def student_feedback():
-    return render_template("student_feedback.html", recordings=STUDENT_RECORDINGS)
-
-
+    return render_template(
+        "student_feedback.html",
+        recordings=STUDENT_RECORDINGS
+    )
 
 
 @app.route("/gallery")
@@ -69,8 +71,6 @@ def gallery():
     )
 
 
-
-
 @app.route("/faq")
 def faq():
     return render_template("faq.html")
@@ -88,7 +88,34 @@ def contact():
 
 @app.route("/teacher-feedback")
 def teacher_feedback():
-    return render_template("teacher_feedback.html", recordings=TEACHER_RECORDINGS)
+    return render_template(
+        "teacher_feedback.html",
+        recordings=TEACHER_RECORDINGS
+    )
+
+
+@app.route("/sitemap.xml")
+def sitemap():
+    pages = [
+        "",
+        "about",
+        "student-feedback",
+        "teacher-feedback",
+        "gallery",
+        "faq",
+        "contact",
+    ]
+
+    xml = '<?xml version="1.0" encoding="UTF-8"?>'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+
+    for page in pages:
+        url = f"https://wings-for-christ.onrender.com/{page}"
+        xml += f"<url><loc>{url}</loc></url>"
+
+    xml += "</urlset>"
+
+    return Response(xml, mimetype="application/xml")
 
 
 if __name__ == "__main__":
