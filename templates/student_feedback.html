@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Student Feedback | Wings For Christ{% endblock %}
+
+{% block content %}
+  <section class="feedback-page page">
+    <div class="page-heading feedback-heading">
+      <p class="eyebrow">STUDENT STORIES</p>
+      <h1>Hear from our students</h1>
+      <p>Videos play with sound as each story comes into view.</p>
+    </div>
+    <div class="recording-grid student-recording-list">
+      {% for recording in recordings %}
+        {% set recording_url = url_for('static', filename='media/' ~ recording.file) %}
+        <article class="recording-card student-recording">
+          <div class="recording-icon" aria-hidden="true">♫</div>
+          <div class="recording-copy">
+            <p class="recording-label">STUDENT FEEDBACK</p>
+            <h2>{{ recording.school }}</h2>
+            <p>Student words from {{ recording.school }}</p>
+          </div>
+
+          <video class="student-feedback-video" controls preload="metadata" playsinline data-scroll-autoplay aria-label="Student feedback video from {{ recording.school }}">
+            <source src="{{ recording_url }}" type="video/mp4">
+            Your browser cannot play this video.
+          </video>
+        </article>
+      {% else %}
+        <p class="recording-empty">Student recordings will appear here soon.</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
+
+
+
+
+
+

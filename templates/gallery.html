@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Gallery | Wings for Christ{% endblock %}
+
+{% block content %}
+  <section class="page-heading page">
+    <p class="eyebrow">SCHOOL OUTREACH</p>
+    <h1>Gallery</h1>
+    <p>Stories and moments from our school programs.</p>
+  </section>
+
+  {% if school_videos %}
+    <section class="program-videos page" aria-labelledby="program-videos-title">
+      <div class="program-videos-heading">
+        <p class="eyebrow">WATCH OUR PROGRAMS</p>
+        <h2 id="program-videos-title">School program videos</h2>
+        <p>Choose a school video to watch.</p>
+      </div>
+
+      <div class="program-video-grid">
+        {% for video in school_videos %}
+          <article class="program-video-card">
+            <h3>{{ video.title }}</h3>
+            <video controls preload="metadata" playsinline>
+              <source src="{{ url_for('static', filename=video.file) }}" type="{{ video.type }}">
+              Your browser does not support this video.
+            </video>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="gallery-list page">
+    <article class="gallery-item new-school-event">
+      <header class="gallery-event-heading">
+        <p class="eyebrow">SCHOOL OUTREACH</p>
+        <h2>School / College Name</h2>
+        <p class="gallery-event-year">Year: to be added</p>
+        <p class="gallery-encouragement">Every young person is seen, valued, and full of promise.</p>
+      </header>
+      <div class="gallery-outreach-rows">
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-01.jpg') }}" alt="Students gathered for a school outreach program"><div class="outreach-copy"><p class="eyebrow">SCHOOL OUTREACH</p><h3>A gathering of students</h3><p>Students come together for an encouraging school program filled with music and hope.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-02.jpg') }}" alt="Wings for Christ team performing for students"><div class="outreach-copy"><p class="eyebrow">OUR TEAM</p><h3>Music brings us together</h3><p>Live music creates a joyful moment for students and the school community.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-03.jpg') }}" alt="Students watching a Wings for Christ program"><div class="outreach-copy"><p class="eyebrow">SCHOOL OUTREACH</p><h3>Listening and sharing hope</h3><p>Every student deserves to hear words of hope, encouragement, and purpose.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-04.jpg') }}" alt="Students gathered in the school courtyard"><div class="outreach-copy"><p class="eyebrow">SCHOOL COMMUNITY</p><h3>A day to remember</h3><p>A school gathering is a chance to build connection and encourage one another.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-05.jpg') }}" alt="A large school assembly outdoors"><div class="outreach-copy"><p class="eyebrow">SCHOOL ASSEMBLY</p><h3>Many students, one message</h3><p>May every young person leave knowing they are valued and full of potential.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-06.jpg') }}" alt="Wings for Christ musician leading a song"><div class="outreach-copy"><p class="eyebrow">MUSIC</p><h3>Singing with purpose</h3><p>Music can lift spirits and remind students to believe in their future.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-07.jpg') }}" alt="Students participating in an activity"><div class="outreach-copy"><p class="eyebrow">STUDENT PARTICIPATION</p><h3>Learning by taking part</h3><p>When students join in, confidence and community grow together.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-08.jpg') }}" alt="Students attending an outdoor school event"><div class="outreach-copy"><p class="eyebrow">SCHOOL OUTREACH</p><h3>Sharing encouragement outdoors</h3><p>Every school community can be a place where young people find support and hope.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-09.jpg') }}" alt="Students and team gathered for an outreach program"><div class="outreach-copy"><p class="eyebrow">SCHOOL OUTREACH</p><h3>Growing together</h3><p>We are grateful for every opportunity to spend time with students and teachers.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-10.jpg') }}" alt="Wings for Christ musician performing on stage"><div class="outreach-copy"><p class="eyebrow">LIVE MUSIC</p><h3>A song of hope</h3><p>Inspirational songs bring joy and encouragement to the school program.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-11.jpg') }}" alt="Students responding during the school program"><div class="outreach-copy"><p class="eyebrow">STUDENT VOICES</p><h3>Young people joining in</h3><p>Every voice matters, and every student has gifts worth sharing.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-12.jpg') }}" alt="Wings for Christ speaker sharing a message"><div class="outreach-copy"><p class="eyebrow">MESSAGE OF HOPE</p><h3>Encouragement for each student</h3><p>A caring message can remind a young person that their life has meaning.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-13.jpg') }}" alt="School assembly watching the outreach team"><div class="outreach-copy"><p class="eyebrow">SCHOOL ASSEMBLY</p><h3>Hope shared with the whole school</h3><p>We want every student to feel seen, encouraged, and ready to dream.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-14.jpg') }}" alt="Students gathered in the school grounds"><div class="outreach-copy"><p class="eyebrow">SCHOOL COMMUNITY</p><h3>Making space for encouragement</h3><p>Students thrive when their community supports them and believes in them.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-15.jpg') }}" alt="Wings for Christ team performing at a school"><div class="outreach-copy"><p class="eyebrow">CULTURAL PROGRAM</p><h3>Creative performances with a purpose</h3><p>Music and creative arts make room for joy, reflection, and inspiration.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-16.jpg') }}" alt="Students taking part in the outreach"><div class="outreach-copy"><p class="eyebrow">STUDENT PARTICIPATION</p><h3>Confidence grows together</h3><p>Every student can discover their strengths and make a positive difference.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-17.jpg') }}" alt="Students joining an interactive school activity"><div class="outreach-copy"><p class="eyebrow">SCHOOL OUTREACH</p><h3>Learning, music, and connection</h3><p>A welcoming program helps students connect, reflect, and look ahead with hope.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-18.jpg') }}" alt="Wings for Christ musician singing with a guitar"><div class="outreach-copy"><p class="eyebrow">MUSIC</p><h3>Sharing songs that encourage</h3><p>Music helps carry a message of courage and purpose to young hearts.</p></div></article>
+  <article class="outreach-row gallery-outreach-row"><img src="{{ url_for('static', filename='media/gallery-school-19.jpg') }}" alt="Wings for Christ team sharing music with students"><div class="outreach-copy"><p class="eyebrow">SCHOOL OUTREACH</p><h3>Inspiring the next generation</h3><p>May every student know they matter and have a bright future ahead.</p></div></article>
+</div>
+    </article>
+
+    <article class="gallery-item">
+      <h2>Santhome PU College &amp; School</h2>
+      <div class="gallery-row">
+        <img src="{{ url_for('static', filename='media/Santhom images.avif') }}" alt="Santhome school outreach">
+        <div><p>A peaceful, welcoming gathering where students connected, took part, and found encouragement.</p></div>
+      </div>
+    </article>
+
+    <article class="gallery-item">
+      <h2>Aishwarya International Public School</h2>
+      <div class="gallery-row">
+        <img src="{{ url_for('static', filename='media/Aishwarya.avif') }}" alt="Aishwarya school outreach">
+        <div><p>Students were encouraged to face exam fear and academic pressure with confidence, healthy routines, and support from people they trust.</p></div>
+      </div>
+    </article>
+
+    <article class="gallery-item">
+      <h2>Sri Chaitanya School</h2>
+      <div class="gallery-row">
+        <img src="{{ url_for('static', filename='media/SriChanthyana.avif') }}" alt="Sri Chaitanya school outreach">
+        <div><p>A caring space to talk about stress and emotional wellbeing, and to remember that reaching out for help is a strength.</p></div>
+      </div>
+    </article>
+
+    <article class="gallery-item">
+      <h2>Adarsha PU School</h2>
+      <div class="gallery-row">
+        <img src="{{ url_for('static', filename='media/Adarsha.avif') }}" alt="Adarsha school outreach">
+        <div><p>Promoting addiction awareness, healthy choices, and supportive conversations without judgement.</p></div>
+      </div>
+    </article>
+
+    <article class="gallery-item">
+      <h2>Twinkel School</h2>
+      <div class="gallery-row">
+        <img src="{{ url_for('static', filename='media/Twinkal.avif') }}" alt="Twinkel school outreach">
+        <div><p>A hopeful suicide prevention message: every student’s life matters, and asking a trusted person for help is a brave step.</p></div>
+      </div>
+    </article>
+  </section>
+{% endblock %}
+
+
