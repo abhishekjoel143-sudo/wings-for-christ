@@ -1,6 +1,11 @@
+
 {% extends "base.html" %}
 
-{% block title %}Home | Wings For Christ{% endblock %}
+{% block title %}Wings For Christ | School & College Outreach in Mandya, Karnataka{% endblock %}
+
+{% block meta_description %}
+Wings For Christ in Mandya, Karnataka, inspires students through school and college outreach programs, music, creative arts, mentorship and messages of hope and purpose.
+{% endblock %}
 
 {% block body_class %}home-page{% endblock %}
 
@@ -12,26 +17,44 @@
 {% endblock %}
 
 {% block content %}
+
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-shade"></div>
 
     <div class="hero-content">
-      <p class="hero-kicker"><span></span> Created With Purpose </p>
-      <img class="hero-logo-art" src="{{ url_for('static', filename='media/wings-title-art-transparent.png') }}" alt="Wings For Christ with golden wings">
-      <p class="hero-description">
-        Reaching young people with encouragement, purpose .
-      </p>
-      <a class="hero-button" href="#vision-mission">Discover our vision <span>↘</span></a>
+      <p class="hero-kicker"><span></span> Created With Purpose</p>
+
+      <img
+        class="hero-logo-art"
+        src="{{ url_for('static', filename='media/wings-title-art-transparent.png') }}"
+        alt="Wings For Christ logo with golden wings">
+
+      <h1 class="hero-description">
+        Encouraging young people through school and college outreach in Karnataka.
+      </h1>
+
+      <a class="hero-button" href="#vision-mission">
+        Discover our vision <span>↘</span>
+      </a>
     </div>
 
-    <div class="hero-caption">SCHOOL &amp; COLLEGE OUTREACH <span>·</span> MANDYA, KARNATAKA</div>
+    <div class="hero-caption">
+      SCHOOL &amp; COLLEGE OUTREACH <span>·</span> MANDYA, KARNATAKA
+    </div>
   </section>
 
+  <!-- VISION AND MISSION SECTION -->
   <section class="vision-section" id="vision-mission">
     <div class="section-heading">
       <p class="eyebrow">OUR HEART</p>
       <h2>A generation with <em>hope and purpose.</em></h2>
-      <p>We believe every young person deserves to know their life has value and possibility.</p>
+      <p>
+        Wings For Christ believes every young person deserves to know
+        their life has value and possibility. Through school outreach,
+        college programs, music and encouragement, we inspire students
+        to discover their purpose and potential.
+      </p>
     </div>
 
     <div class="vision-grid">
@@ -63,47 +86,136 @@
       </article>
     </div>
   </section>
+
+  <!-- SCHOOL AND COLLEGE OUTREACH SECTION -->
   <section class="outreach-section" aria-labelledby="outreach-title">
     <div class="outreach-heading">
       <p class="eyebrow">OUR VISITS</p>
-      <h2 id="outreach-title">Schools &amp; Colleges</h2>
-      <p>Moments from Wings for Christ outreach programs with students.</p>
+      <h2 id="outreach-title">School &amp; College Outreach Programs</h2>
+      <p>
+        Explore moments from Wings For Christ school and college
+        outreach programs with students in Karnataka.
+      </p>
     </div>
 
     <div class="outreach-list">
-      <article class="outreach-row"><img src="{{ url_for('static', filename='media/outreach-01-school-assembly.jpg') }}" alt="Students gathered for an outdoor school assembly"><div class="outreach-copy"><p class="eyebrow">SCHOOL OUTREACH</p><h3>A Gathering of Students</h3><p>Students come together for an encouraging school program filled with music and hope.</p></div></article>
-      <article class="outreach-row"><img src="{{ url_for('static', filename='media/outreach-02-team-group.jpg') }}" alt="Wings for Christ team gathered after a program"><div class="outreach-copy"><p class="eyebrow">OUR TEAM</p><h3>Serving young people together</h3><p>Our team shares its time and gifts to support students through creative performances.</p></div></article>
-      <article class="outreach-row"><img src="{{ url_for('static', filename='media/outreach-03-team-performance.jpg') }}" alt="Wings for Christ team after a cultural performance"><div class="outreach-copy"><p class="eyebrow">CULTURAL PROGRAM</p><h3>Creativity with purpose</h3><p>Music and performances help make each school and college visit memorable.</p></div></article>
-      <article class="outreach-row"><img src="{{ url_for('static', filename='media/outreach-04-school-hall.jpg') }}" alt="Students attending a school hall program"><div class="outreach-copy"><p class="eyebrow">SCHOOL PROGRAM</p><h3>A message for every student</h3><p>Students and teachers share a meaningful time together during the outreach program.</p></div></article>
-      <article class="outreach-row"><img src="{{ url_for('static', filename='media/outreach-05-stage-program.jpg') }}" alt="Wings for Christ team performing for students"><div class="outreach-copy"><p class="eyebrow">LIVE PERFORMANCE</p><h3>Sharing encouragement on stage</h3><p>The team uses music and creative arts to bring encouragement to a student audience.</p></div></article>
-      <article class="outreach-row"><img src="{{ url_for('static', filename='media/outreach-06-student-audience.jpg') }}" alt="Students watching a Wings for Christ program"><div class="outreach-copy"><p class="eyebrow">STUDENT GATHERING</p><h3>Learning and growing together</h3><p>Students take part in a school gathering centered on hope, confidence, and purpose.</p></div></article>
-      <article class="outreach-row"><img src="{{ url_for('static', filename='media/outreach-07-student-participation.jpg') }}" alt="Students participating in the school outreach"><div class="outreach-copy"><p class="eyebrow">STUDENT PARTICIPATION</p><h3>Making the program interactive</h3><p>Students join in and share the energy of a lively school outreach event.</p></div></article>
-      <article class="outreach-row"><img src="{{ url_for('static', filename='media/outreach-08-team-outdoors.jpg') }}" alt="Wings for Christ team outdoors at an outreach venue"><div class="outreach-copy"><p class="eyebrow">OUTREACH TEAM</p><h3>Taking the message beyond the stage</h3><p>Our team visits schools and colleges to encourage young people in their community.</p></div></article>
-      <article class="outreach-row"><img src="{{ url_for('static', filename='media/outreach-09-speaker.jpg') }}" alt="A speaker encouraging students at an outdoor program"><div class="outreach-copy"><p class="eyebrow">MESSAGE OF HOPE</p><h3>Encouragement for the next generation</h3><p>A motivational message reminds students that their lives have purpose and value.</p></div></article>
+
+      <article class="outreach-row">
+        <img src="{{ url_for('static', filename='media/outreach-01-school-assembly.jpg') }}"
+             alt="Students gathered for a Wings For Christ school outreach assembly">
+        <div class="outreach-copy">
+          <p class="eyebrow">SCHOOL OUTREACH</p>
+          <h3>A Gathering of Students</h3>
+          <p>Students come together for an encouraging school program filled with music and hope.</p>
+        </div>
+      </article>
+
+      <article class="outreach-row">
+        <img src="{{ url_for('static', filename='media/outreach-02-team-group.jpg') }}"
+             alt="Wings For Christ outreach team gathered after a school program">
+        <div class="outreach-copy">
+          <p class="eyebrow">OUR TEAM</p>
+          <h3>Serving young people together</h3>
+          <p>Our team shares its time and gifts to support students through creative performances.</p>
+        </div>
+      </article>
+
+      <article class="outreach-row">
+        <img src="{{ url_for('static', filename='media/outreach-03-team-performance.jpg') }}"
+             alt="Wings For Christ team participating in a cultural performance">
+        <div class="outreach-copy">
+          <p class="eyebrow">CULTURAL PROGRAM</p>
+          <h3>Creativity with purpose</h3>
+          <p>Music and performances help make each school and college visit memorable.</p>
+        </div>
+      </article>
+
+      <article class="outreach-row">
+        <img src="{{ url_for('static', filename='media/outreach-04-school-hall.jpg') }}"
+             alt="Students attending a Wings For Christ school hall program">
+        <div class="outreach-copy">
+          <p class="eyebrow">SCHOOL PROGRAM</p>
+          <h3>A message for every student</h3>
+          <p>Students and teachers share a meaningful time together during the outreach program.</p>
+        </div>
+      </article>
+
+      <article class="outreach-row">
+        <img src="{{ url_for('static', filename='media/outreach-05-stage-program.jpg') }}"
+             alt="Wings For Christ team performing on stage for students">
+        <div class="outreach-copy">
+          <p class="eyebrow">LIVE PERFORMANCE</p>
+          <h3>Sharing encouragement on stage</h3>
+          <p>The team uses music and creative arts to bring encouragement to a student audience.</p>
+        </div>
+      </article>
+
+      <article class="outreach-row">
+        <img src="{{ url_for('static', filename='media/outreach-06-student-audience.jpg') }}"
+             alt="Students watching a Wings For Christ outreach program">
+        <div class="outreach-copy">
+          <p class="eyebrow">STUDENT GATHERING</p>
+          <h3>Learning and growing together</h3>
+          <p>Students take part in a school gathering centered on hope, confidence, and purpose.</p>
+        </div>
+      </article>
+
+      <article class="outreach-row">
+        <img src="{{ url_for('static', filename='media/outreach-07-student-participation.jpg') }}"
+             alt="Students actively participating in a Wings For Christ school outreach">
+        <div class="outreach-copy">
+          <p class="eyebrow">STUDENT PARTICIPATION</p>
+          <h3>Making the program interactive</h3>
+          <p>Students join in and share the energy of a lively school outreach event.</p>
+        </div>
+      </article>
+
+      <article class="outreach-row">
+        <img src="{{ url_for('static', filename='media/outreach-08-team-outdoors.jpg') }}"
+             alt="Wings For Christ outreach team at an outdoor school visit">
+        <div class="outreach-copy">
+          <p class="eyebrow">OUTREACH TEAM</p>
+          <h3>Taking the message beyond the stage</h3>
+          <p>Our team visits schools and colleges to encourage young people in their community.</p>
+        </div>
+      </article>
+
+      <article class="outreach-row">
+        <img src="{{ url_for('static', filename='media/outreach-09-speaker.jpg') }}"
+             alt="Speaker sharing a message of hope with students at an outdoor program">
+        <div class="outreach-copy">
+          <p class="eyebrow">MESSAGE OF HOPE</p>
+          <h3>Encouragement for the next generation</h3>
+          <p>A motivational message reminds students that their lives have purpose and value.</p>
+        </div>
+      </article>
+
     </div>
   </section>
+
+  <!-- LEADERSHIP SECTION -->
   <section class="founder-section" aria-labelledby="founder-title">
     <div class="leadership-inner">
       <p class="eyebrow">WINGS FOR CHRIST</p>
       <h2 class="founder-heading" id="founder-title">Our Leadership</h2>
-      <p class="leadership-intro">We are grateful for the people who give their time, heart, and gifts to encourage the next generation.</p>
+
+      <p class="leadership-intro">
+        We are grateful for the people who give their time, heart,
+        and gifts to encourage the next generation.
+      </p>
 
       <article class="founder-profile">
         <img
           class="founder-photo"
           src="{{ url_for('static', filename='media/Steve anna -1.jpeg') }}"
-          alt="Steve S Robinson, Founder of Wings for Christ">
+          alt="Steve S Robinson, founder of Wings For Christ">
+
         <div class="founder-details">
           <h3 class="founder-name">Steve S Robinson</h3>
-          <p>Founder · Wings for Christ Band</p>
+          <p>Founder · Wings For Christ Band</p>
         </div>
       </article>
     </div>
   </section>
+
 {% endblock %}
-
-
-
-
-
-

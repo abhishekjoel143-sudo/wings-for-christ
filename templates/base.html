@@ -8,13 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#142a24">
 
-    <title>{% block title %}Wings For Christ{% endblock %}</title>
+    <title>{% block title %}Wings For Christ | School & College Outreach in Karnataka{% endblock %}</title>
 
+    <meta name="description" content="{% block meta_description %}Wings For Christ, based in Mandya, Karnataka, encourages young people through school and college outreach, inspirational music, creative arts and messages of hope.{% endblock %}">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://wings-for-christ.onrender.com{{ request.path }}">
+
+    <!-- Open Graph SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wings For Christ">
+    <meta property="og:title" content="{{ self.title() }}">
+    <meta property="og:description" content="{{ self.meta_description() }}">
+    <meta property="og:url" content="https://wings-for-christ.onrender.com{{ request.path }}">
+
+    <!-- Twitter SEO -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ self.title() }}">
+    <meta name="twitter:description" content="{{ self.meta_description() }}">
+
+    <!-- Website CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='20261117-gallery-caption-font') }}">
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
+
   {% block page_background %}{% endblock %}
+
+  <!-- HEADER -->
   <header class="site-header">
     <a class="brand" href="{{ url_for('home') }}" aria-label="Wings For Christ home">
       <img class="brand-logo" src="{{ url_for('static', filename='media/logo .jpeg') }}" alt="">
@@ -24,10 +46,12 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="{{ url_for('home') }}">Home</a>
       <a href="{{ url_for('about') }}">About Us</a>
+
       <div class="contents-menu">
         <button class="contents-button" type="button" aria-expanded="false" aria-controls="contentsPanel">
           <span class="menu-lines" aria-hidden="true">☰</span> Contents
         </button>
+
         <div class="contents-panel" id="contentsPanel" hidden>
           <a href="{{ url_for('home') }}#vision-mission">Vision &amp; Mission</a>
           <a href="{{ url_for('teacher_feedback') }}">Teacher Feedback</a>
@@ -40,57 +64,88 @@
     </nav>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main>
     {% block content %}{% endblock %}
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-columns">
+
       <section class="footer-column">
         <h2>ABOUT US</h2>
-        <p>Wings for Christ encourages young people through inspirational music, creative performances, and messages of hope and purpose.</p>
+        <p>
+          Wings for Christ encourages young people through inspirational music,
+          creative performances, and messages of hope and purpose.
+        </p>
       </section>
+
       <section class="footer-column">
         <h2>CONTACT</h2>
-        <p><strong>Steve S Robinson</strong><br>Wings for Christ Band</p>
+
+        <p>
+          <strong>Steve S Robinson</strong><br>
+          Wings for Christ Band
+        </p>
+
         <a href="tel:+917349264077">+91 73492 64077</a>
-        <a href="mailto:Wingsforchrist777@gmail.com">Wingsforchrist777@gmail.com</a>
-        <a class="footer-instagram" href="https://www.instagram.com/wingsforchrist777/" target="_blank" rel="noopener noreferrer">
+
+        <a href="mailto:Wingsforchrist777@gmail.com">
+          Wingsforchrist777@gmail.com
+        </a>
+
+        <a class="footer-instagram"
+           href="https://www.instagram.com/wingsforchrist777/"
+           target="_blank"
+           rel="noopener noreferrer">
+
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <rect x="3" y="3" width="18" height="18" rx="5"></rect>
             <circle cx="12" cy="12" r="4"></circle>
             <circle class="instagram-dot" cx="17.5" cy="6.5" r="1"></circle>
           </svg>
+
           <span>@wingsforchrist777</span>
         </a>
       </section>
+
       <section class="footer-column">
         <h2>SUBSCRIBE FOR EMAILS</h2>
-        <p>Send us your email address to request Wings for Christ updates.</p>
+
+        <p>
+          Send us your email address to request Wings for Christ updates.
+        </p>
+
         <form class="subscribe-form" id="subscribeForm">
-          <label class="visually-hidden" for="subscriberEmail">Your email address</label>
-          <input id="subscriberEmail" name="email" type="email" placeholder="Enter your email ID" required>
+          <label class="visually-hidden" for="subscriberEmail">
+            Your email address
+          </label>
+
+          <input
+            id="subscriberEmail"
+            name="email"
+            type="email"
+            placeholder="Enter your email ID"
+            required>
+
           <button type="submit">Subscribe Now</button>
         </form>
       </section>
+
     </div>
+
     <div class="footer-bottom">
-      <a class="footer-brand" href="{{ url_for('home') }}">Wings For Christ</a>
+      <a class="footer-brand" href="{{ url_for('home') }}">
+        Wings For Christ
+      </a>
+
       <span>© 2026 Wings for Christ</span>
     </div>
   </footer>
+
+  <!-- WEBSITE JAVASCRIPT -->
   <script src="{{ url_for('static', filename='main.js', v='20261117-gallery-caption-font') }}"></script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
