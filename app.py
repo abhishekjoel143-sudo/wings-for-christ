@@ -118,5 +118,16 @@ def sitemap():
     return Response(xml, mimetype="application/xml")
 
 
+@app.route("/robots.txt")
+def robots():
+    content = """User-agent: *
+Allow: /
+
+Sitemap: https://wings-for-christ.onrender.com/sitemap.xml
+"""
+    return Response(content, mimetype="text/plain")
+
+
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8000, debug=False, use_reloader=False)
