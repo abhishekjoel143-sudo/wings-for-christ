@@ -1,14 +1,18 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <head>
     <meta name="google-site-verification" content="_NhpfP3dnlfUk6Ebn3gcQ0pu84BEFoKzeETt9u8ELgU" />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#142a24">
-  <title>{% block title %}Wings For Christ{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='20261117-gallery-caption-font') }}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#142a24">
+
+    <title>{% block title %}Wings For Christ{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='20261117-gallery-caption-font') }}">
 </head>
+
 <body class="{% block body_class %}{% endblock %}">
   {% block page_background %}{% endblock %}
   <header class="site-header">
